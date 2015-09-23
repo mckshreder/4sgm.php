@@ -1,7 +1,7 @@
 <?php
 
 class App
-{
+{	
 
 	protected $controller = 'home';
 
@@ -9,8 +9,15 @@ class App
 
 	protected $params = [];
 
-	public function __construct()
+
+
+public function __construct()
 	{
+		// $feed = file_get_contents('http://www.4sgm.com/is-bin/INTERSHOP.enfinity/WFS/4sgm-Storefront-Site/en_US/-/USD/ViewParametricSearch-AdvancedSearch;pgid=8uKCiKaqQORSR00pmU_Mlavu0000K_PVledH?SearchCategoryUUID=t_DAwGQTQFQAAAELiFM0E4U1&rsstitle=Baby+Items/rss-feed/rss.xml');
+		// $rss = new SimpleXmlElement($feed);
+
+		// echo $rss;
+		
 		$url = $this->parseUrl();
 
 		if(file_exists('../app/controllers/' . $url[0] . '.php'))
@@ -36,6 +43,8 @@ class App
 		$this->params = $url ? array_values($url) : [];
 		
 		call_user_func_array([$this->controller, $this->method], $this->params);
+
+
 	}
 
 	public function parseUrl()

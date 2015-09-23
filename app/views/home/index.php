@@ -1,168 +1,19 @@
-Hello<?=$data['name']?>
+<!-- Hello<?=$data['name']?> -->
 <html>
 <head>
-	<meta charset="utf-8">
 		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"/> -->
 		<link rel="stylesheet" href="css/foundation.css"/>
-		<link rel="stylesheet" href="css/foundation.min.css"/>
+		<!-- <link rel="stylesheet" href="css/foundation.min.css"/>
 		<link rel="stylesheet" href="css/normalize.css"/>
-		<link rel="stylesheet" href="css/application.css.scss">
-		<script src="js/modernizr.js"></script>
-		<script src="js/main.js"></script>		
+		<link rel="stylesheet" href="css/application.css.scss"> -->
+		<script src="js/main.js"></script>
+		<script src="js/vendor/jquery.js"></script>
+		<script src="js/vendor/modernizr.js"></script>
+		<script src="js/foundation.min.js"></script>		
+		<!-- <script src="js/templates4/foundation4.js"></script> -->
 </head>
 <body>
-<div class="row">
-	<div class="large-12 columns">
-		
-		<div class="header">
-		<!-- <image src="img/4sgm_header_logo.png"> -->
-		<a class="header_link">Hi daddy</a>
-		<!-- <h1>HI DADDY!</h1> -->
-		</div>
-
-
-		<nav>
-			<ul class="nav_bar">
-				<li class="nav_tab">
-					<a href="/posts">HOME</a>
-				</li>
-
-				<li class="nav_tab">
-					<a href="/posts">HOME</a>
-				</li>
-				
-				<li class="nav_tab">
-					<a href="/posts">HOME</a>
-				</li>
-				
-				<li class="nav_tab">
-					<a href="/posts">HOME</a>
-				</li>
-				
-				<li class="nav_tab">
-					<a href="/posts">HOME</a>
-				</li>
-				
-				<li class="nav_tab">
-					<a href="/posts">HOME</a>
-				</li>
-
-				<li class="nav_tab">
-					<a href="/posts">HOME</a>
-				</li>
-
-				<li class="nav_tab">
-					<a href="/posts">HOME</a>
-				</li>
-
-			</ul>
-
-			<ul class="nav_bar">
-				<li class="nav_tab">
-					<a href="/posts">HOME</a>
-				</li>
-
-				<li class="nav_tab">
-					<a href="/posts">HOME</a>
-				</li>
-				
-				<li class="nav_tab">
-					<a href="/posts">HOME</a>
-				</li>
-				
-				<li class="nav_tab">
-					<a href="/posts">HOME</a>
-				</li>
-				
-				<li class="nav_tab">
-					<a href="/posts">HOME</a>
-				</li>
-				
-				<li class="nav_tab">
-					<a href="/posts">HOME</a>
-				</li>
-
-				<li class="nav_tab">
-					<a href="/posts">HOME</a>
-				</li>
-
-				<li class="nav_tab">
-					<a href="/posts">HOME</a>
-				</li>
-
-			</ul>
-
-
-			<div class="search_bar">
-				<div class="input-group">
-			      <input type="text" class="form-control" placeholder="Search for...">
-			      <span class="input-group-btn">
-			        <button class="btn btn-default" type="button">Go!</button>
-			      </span>
-			    </div>
-			</div>
-
-		</nav>
-	</div>
-</div>
-
-	<!-- start of left column-->
-		<div class="left_column">
-
-			<div class="left_live_support">
-			</div>
-
-			<div class="left_category_box">
-			</div>
-
-			<div class="left_ad">
-			</div>
-
-		</div>
-
-
-		<!-- start of center column -->
-		<div class="center_column">
-			
-			<div class="home_slider">
-			</div>
-
-			<div class="wide_photo">
-			</div>
-
-			<div class="half_photo">	
-			</div>
-			<div class="half_photo">	
-			</div>
-
-			<div class="wide_photo">	
-			</div>
-
-			<div class="half_slim_photo">
-			</div>
-
-		</div>
-
-		<!-- the start of the right side column-->
-		<div class="right_column">
-			<div class="right_login">
-			</div>
-
-			<div class="right_about">
-			</div>
-
-			<div class="right_testimonials">
-			</div>
-		</div>
-
-
-		<div class="footer">
-		</div>
-
-	</div>
-
-
 
 
 <nav class="top-bar">
@@ -236,9 +87,9 @@ Hello<?=$data['name']?>
         <div class="large-12 hide-for-small">
  
           <div id="featured" data-orbit>
-              <img src="http://placehold.it/1200x500&text=Slide Image 1" alt="slide image">
-              <img src="http://placehold.it/1200x500&text=Slide Image 2" alt="slide image">
-              <img src="http://placehold.it/1200x500&text=Slide Image 3" alt="slide image">
+              <img src="https://placehold.it/1200x500&text=Slide Image 1" alt="slide image">
+              <img src="https://placehold.it/1200x500&text=Slide Image 2" alt="slide image">
+              <img src="https://placehold.it/1200x500&text=Slide Image 3" alt="slide image">
             </div>
  
       </div>
@@ -251,7 +102,7 @@ Hello<?=$data['name']?>
       <div class="row">
         <div class="large-12 columns show-for-small">
  
-          <img src="http://placehold.it/1200x700&text=Mobile Header">
+          <img src="https://placehold.it/1200x700&text=Mobile Header">
  
         </div>
       </div><br>
@@ -269,7 +120,7 @@ Hello<?=$data['name']?>
  
               <div class="row">
                 <div class="large-1 column">
-                  <img src="http://placehold.it/50x50&text=[img]">
+                  <img src="https://placehold.it/50x50&text=[img]">
                 </div>
  
                 <div class="large-9 columns">
@@ -281,7 +132,7 @@ Hello<?=$data['name']?>
               <div class="hide-for-small">
                 <div class="row">
                   <div class="large-1 column">
-                    <img src="http://placehold.it/50x50&text=[img]">
+                    <img src="https://placehold.it/50x50&text=[img]">
                   </div>
  
                   <div class="large-9 columns">
@@ -291,7 +142,7 @@ Hello<?=$data['name']?>
  
                 <div class="row">
                   <div class="large-1 column">
-                    <img src="http://placehold.it/50x50&text=[img]">
+                    <img src="https://placehold.it/50x50&text=[img]">
                   </div>
  
                   <div class="large-9 columns">
@@ -301,7 +152,7 @@ Hello<?=$data['name']?>
  
                 <div class="row">
                   <div class="large-1 column">
-                    <img src="http://placehold.it/50x50&text=[img]">
+                    <img src="https://placehold.it/50x50&text=[img]">
                   </div>
  
                   <div class="large-9 columns">
@@ -316,7 +167,7 @@ Hello<?=$data['name']?>
              
  
             <div class="large-4 small-6 columns">
-              <img src="http://placehold.it/300x465&text=Image">
+              <img src="https://placehold.it/300x465&text=Image">
             </div>
  
              
@@ -386,6 +237,7 @@ Hello<?=$data['name']?>
     </div>
   </div>
  
+
 <script>
 document.write('<script src=js/vendor/' +
 ('__proto__' in {} ? 'zepto' : 'jquery') +
@@ -393,12 +245,13 @@ document.write('<script src=js/vendor/' +
 </script>
 <script src="js/foundation.min.js"></script>
 <script>
-$(document).foundation();
-</script>
-<script src="js/jquery.js"></script>
-<!-- <script src="js/templates4/foundation4.js"></script> -->
+	$(document).foundation();
+</script>	
+<script src="js/vendor/jquery.js"></script>
+<!-- <script src="js/foundation"></script> -->
+
 <script>
-$(document).foundation();
+// $(document).foundation();
 var doc = document.documentElement;
 doc.setAttribute('data-useragent', navigator.userAgent);
 </script>
