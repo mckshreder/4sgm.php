@@ -13,13 +13,20 @@ class App
 
 public function __construct()
 	{
-		$feed = file_get_contents('http://www.4sgm.com/is-bin/INTERSHOP.enfinity/WFS/4sgm-Storefront-Site/en_US/-/USD/ViewParametricSearch-AdvancedSearch;pgid=8uKCiKaqQORSR00pmU_Mlavu0000K_PVledH?SearchCategoryUUID=t_DAwGQTQFQAAAELiFM0E4U1&rsstitle=Baby+Items/rss-feed/rss.xml');
+		// $feed = file_get_contents('http://www.4sgm.com/is-bin/INTERSHOP.enfinity/WFS/4sgm-Storefront-Site/en_US/-/USD/ViewParametricSearch-AdvancedSearch;pgid=8uKCiKaqQORSR00pmU_Mlavu0000K_PVledH?SearchCategoryUUID=t_DAwGQTQFQAAAELiFM0E4U1&rsstitle=Baby+Items/rss-feed/rss.xml');
 		// $rss = new SimpleXmlElement($feed);
 
-		echo $feed;
+		// // $rss = $this->rssFeed();
+		// print_r($rss);
 
-		$rss = $this->rssFeed($this->feed);
 		
+		// echo $rss->channel->item;
+		// foreach($rss->channel->item as $entry) {
+		// 	echo "<p><a href=$entry->link title = $entry->title > . $entry->title .</a></p>";
+
+		// 	echo '<p>'. $entry->title .'</p>';}
+
+
 		$url = $this->parseUrl();
 
 		if(file_exists('../app/controllers/' . $url[0] . '.php'))
@@ -44,12 +51,10 @@ public function __construct()
 		
 
 
-		$this->params = $rss ? array_values($rss) : [];
+		$this->params = $url ? array_values($url) : [];
 
 		
 		call_user_func_array([$this->controller, $this->method], $this->params);
-
-
 
 	}
 
@@ -65,8 +70,8 @@ public function __construct()
 	{
 		// $feed = file_get_contents('http://www.4sgm.com/is-bin/INTERSHOP.enfinity/WFS/4sgm-Storefront-Site/en_US/-/USD/ViewParametricSearch-AdvancedSearch;pgid=8uKCiKaqQORSR00pmU_Mlavu0000K_PVledH?SearchCategoryUUID=t_DAwGQTQFQAAAELiFM0E4U1&rsstitle=Baby+Items/rss-feed/rss.xml');
 
-
 		return $rss = new SimpleXmlElement($this->feed);
+		
 		
 	}
 }
