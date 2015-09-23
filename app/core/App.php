@@ -13,10 +13,12 @@ class App
 
 public function __construct()
 	{
-		// $feed = file_get_contents('http://www.4sgm.com/is-bin/INTERSHOP.enfinity/WFS/4sgm-Storefront-Site/en_US/-/USD/ViewParametricSearch-AdvancedSearch;pgid=8uKCiKaqQORSR00pmU_Mlavu0000K_PVledH?SearchCategoryUUID=t_DAwGQTQFQAAAELiFM0E4U1&rsstitle=Baby+Items/rss-feed/rss.xml');
+		$feed = file_get_contents('http://www.4sgm.com/is-bin/INTERSHOP.enfinity/WFS/4sgm-Storefront-Site/en_US/-/USD/ViewParametricSearch-AdvancedSearch;pgid=8uKCiKaqQORSR00pmU_Mlavu0000K_PVledH?SearchCategoryUUID=t_DAwGQTQFQAAAELiFM0E4U1&rsstitle=Baby+Items/rss-feed/rss.xml');
 		// $rss = new SimpleXmlElement($feed);
 
-		// echo $rss;
+		echo $feed;
+
+		$rss = $this->rssFeed($this->feed);
 		
 		$url = $this->parseUrl();
 
@@ -40,9 +42,13 @@ public function __construct()
 			} 
 		}
 		
-		$this->params = $url ? array_values($url) : [];
+
+
+		$this->params = $rss ? array_values($rss) : [];
+
 		
 		call_user_func_array([$this->controller, $this->method], $this->params);
+
 
 
 	}
@@ -53,5 +59,14 @@ public function __construct()
 		{
 			return $url = explode('/', filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL));
 		}
+	}
+
+	public function rssFeed()
+	{
+		// $feed = file_get_contents('http://www.4sgm.com/is-bin/INTERSHOP.enfinity/WFS/4sgm-Storefront-Site/en_US/-/USD/ViewParametricSearch-AdvancedSearch;pgid=8uKCiKaqQORSR00pmU_Mlavu0000K_PVledH?SearchCategoryUUID=t_DAwGQTQFQAAAELiFM0E4U1&rsstitle=Baby+Items/rss-feed/rss.xml');
+
+
+		return $rss = new SimpleXmlElement($this->feed);
+		
 	}
 }

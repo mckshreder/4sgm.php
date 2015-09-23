@@ -15,6 +15,9 @@ class Contact extends Controller
 		$rss = new SimpleXmlElement($feed);
 		foreach($rss->channel->item as $entry) {
 		echo "<p><a href=$entry->link title = $entry->title > . $entry->title .</a></p>";
-}
+
+		echo '<p>'. $entry->title .'</p>';
+		}
 	}
+	
 }

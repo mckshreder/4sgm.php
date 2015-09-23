@@ -1,4 +1,8 @@
-<!-- Hello<?=$data['name']?> -->
+ Hello
+
+ <?=$data['name']?> 
+ <?=$data['rss']?>
+	
 <html>
 <head>
 		<meta charset="utf-8"/>
